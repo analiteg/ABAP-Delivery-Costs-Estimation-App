@@ -14,11 +14,15 @@ CLASS zcl_delivery_costs IMPLEMENTATION.
     DATA(mo_route) = lcl_delivery=>create_instance( ).
 
     " Step 2 - Create System UUID factory
+    " TODO: variable is assigned but never used (ABAP cleaner)
     DATA(system_uuid) = cl_uuid_factory=>create_system_uuid( ).
 
-        DELETE FROM zawarehouse2.
-    DELETE FROM zarates.
-    DELETE FROM zaorder2.
+    " Step 3 - Update Orders Data
 
+    TRY.
+        out->write( mo_route->update_orders_data( mo_route->get_orders( ) ) ).
+      CATCH cx_root INTO DATA(exc).
+        out->write( exc->get_text( ) ).
+    ENDTRY.
   ENDMETHOD.
 ENDCLASS.
