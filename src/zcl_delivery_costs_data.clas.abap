@@ -40,7 +40,7 @@ CLASS zcl_delivery_costs_data IMPLEMENTATION.
         out->write( exsw->get_text( ) ).
     ENDTRY.
 
-    " Step 5 - Create Delivery Zones And Tarifs Table
+    " Step 5 - Create Delivery Zones And Rates Table
     DATA lt_rates TYPE STANDARD TABLE OF zarates.
     TRY.
         lt_rates = VALUE #( ( uuid_z       = system_uuid->create_uuid_x16( )
@@ -89,6 +89,7 @@ CLASS zcl_delivery_costs_data IMPLEMENTATION.
     TRY.
         lt_orders = VALUE #(
             uuid_w = warehouse[ 1 ]-uuid_w
+            del_status = 'n'
             ( cname   = 'Szkoła Podstawowa Nr 1 im. Juliusza Słowackiego w Białymstoku'
               address = 'ul. Juliusza Słowackiego 4 Białystok'
               uuid    = system_uuid->create_uuid_x16( ) )
