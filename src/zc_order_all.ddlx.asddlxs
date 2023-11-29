@@ -1,0 +1,79 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'All Orders',
+                typeNamePlural: 'All Orders',
+                title: { type: #STANDARD, label: 'All Orders', value: 'Cname' } }}
+annotate view ZC_ORDER_ALL with
+{
+  @UI.facet: [ { id:            'AllOrders',
+                 purpose:       #STANDARD,
+                 type:          #IDENTIFICATION_REFERENCE,
+                 label:         'Full Information',
+                 position:      10 }  ]
+             
+  @UI:{ identification: [{ position: 10, label: 'UUID' }] }
+  Uuid;
+
+ @UI.hidden: true
+  Uuidw;
+
+  @UI: {  lineItem:       [ { position: 20 } ],
+          identification: [ { position: 20 } ],
+          selectionField: [ { position: 20 } ] }
+  DelStatus;
+
+
+  @UI: {  lineItem:       [ { position: 30 } ],
+          identification: [ { position: 30 } ],
+          selectionField: [ { position: 30 } ] }
+  Address;
+
+
+  @UI: {  lineItem:       [ { position: 40 } ],
+         identification:  [ { position: 40 } ]
+          }
+  Cname;
+
+
+  @UI: {  lineItem:       [ { position: 50 } ],
+         identification: [ { position: 50 } ] }
+  Vaddress;
+
+  @UI: {  lineItem:       [ { position: 60 } ],
+        identification: [ { position: 60 } ] }
+  Longitude;
+  @UI: {  lineItem:       [ { position: 70 } ],
+      identification: [ { position: 70 } ] }
+  Latitude;
+
+  @UI: {  lineItem:       [ { position: 80 } ],
+      identification: [ { position: 80 } ] }
+  DelDistance;
+
+  @UI: {  lineItem:       [ { position: 90 } ],
+    identification: [ { position: 90 } ] }
+  DelTime;
+
+  @UI: {  lineItem:       [ { position: 100 } ],
+  identification: [ { position: 100 } ] }
+  DelZone;
+
+  @UI: {  lineItem:       [ { position: 110 } ],
+  identification: [ { position: 110 } ] }
+  CurrencyCode;
+
+  @UI: {  lineItem:       [ { position: 120 } ],
+  identification: [ { position: 120 } ] }
+  DelCost;
+
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LocalLastChangedBy;
+  @UI.hidden: true
+  LocalLastChangedAt;
+  @UI.hidden: true
+  LastChangedAt;
+}
