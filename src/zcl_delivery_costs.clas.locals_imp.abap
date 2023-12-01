@@ -261,8 +261,8 @@ CLASS lcl_delivery IMPLEMENTATION.
     ASSIGN <fs_time>->* TO FIELD-SYMBOL(<fs_formatted_time>).
 
     DATA ls_distance TYPE ls_distance.
-    ls_distance-del_distance = <fs_formatted_distance>.
-    ls_distance-del_time     = <fs_formatted_time>.
+    ls_distance-del_distance = round( val = ( <fs_formatted_distance> / 1000 ) dec = 2 ).
+    ls_distance-del_time     = <fs_formatted_time> DIV 60.
 
     rs_result = ls_distance.
   ENDMETHOD.
@@ -299,7 +299,7 @@ CLASS lcl_delivery IMPLEMENTATION.
       DATA(ls_rate) = FILTER #( lt_rate USING KEY primary_key WHERE min_distance <  <fs_order_step_3>-del_distance  AND max_distance >  <fs_order_step_3>-del_distance  ).
       ls_order_line = CORRESPONDING #( <fs_order_step_3> ).
       ls_order_line = CORRESPONDING #( BASE ( ls_order_line ) ls_rate[ 1 ] ).
-      ls_order_line-del_cost =  ls_rate[ 1 ]-zone_tarif * ( ( ls_order_line-del_distance ) / 1000 ) .
+      ls_order_line-del_cost =  ls_rate[ 1 ]-zone_tarif * ( ( ls_order_line-del_distance ) ) .
       APPEND ls_order_line TO lt_total_orders_step_3.
 
     ENDLOOP.

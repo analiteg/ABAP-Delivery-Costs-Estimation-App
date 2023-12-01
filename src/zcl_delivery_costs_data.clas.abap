@@ -43,30 +43,30 @@ CLASS zcl_delivery_costs_data IMPLEMENTATION.
     " Step 5 - Create Delivery Zones And Rates Table
     DATA lt_rates TYPE STANDARD TABLE OF zarates.
     TRY.
-        lt_rates = VALUE #( uom_distance  = 'M'
+        lt_rates = VALUE #( uom_distance  = 'KM'
                             currency_code = 'PLN'
 
                             ( uuid_z       = system_uuid->create_uuid_x16( )
                               min_distance = '0'
-                              max_distance = '3000'
+                              max_distance = '3'
                               del_zone     = 'A'
                               zone_tarif   = '1' )
 
                             ( uuid_z       = system_uuid->create_uuid_x16( )
-                              min_distance = '3000'
-                              max_distance = '5000'
+                              min_distance = '3'
+                              max_distance = '5'
                               del_zone     = 'B'
                               zone_tarif   = '2' )
 
                             ( uuid_z       = system_uuid->create_uuid_x16( )
-                              min_distance = '5000'
-                              max_distance = '10000'
+                              min_distance = '5'
+                              max_distance = '10'
                               del_zone     = 'C'
                               zone_tarif   = '3' )
 
                             ( uuid_z       = system_uuid->create_uuid_x16( )
-                              min_distance = '10000'
-                              max_distance = '50000'
+                              min_distance = '10'
+                              max_distance = '50'
                               del_zone     = 'D'
                               zone_tarif   = '4' ) ).
 
@@ -93,7 +93,7 @@ CLASS zcl_delivery_costs_data IMPLEMENTATION.
         lt_orders = VALUE #(
             uuid_w     = warehouse[ 1 ]-uuid_w
             del_status = 'N'
-            uom_distance = 'M'
+            uom_distance = 'KM'
             uom_time  = 'MIN'
             currency_code = 'PLN'
             ( cname   = 'Szkoła Podstawowa Nr 1 im. Juliusza Słowackiego w Białymstoku'
