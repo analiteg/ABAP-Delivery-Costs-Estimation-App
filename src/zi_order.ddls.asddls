@@ -17,7 +17,11 @@ define root view entity ZI_ORDER
       vaddress                                as Vaddress,
       cast( longitude as abap.dec( 17, 14 ) ) as Longitude,
       cast( latitude  as abap.dec( 17, 14 ) ) as Latitude,
+      uom_distance                            as UomDistance,
+      @Semantics.quantity.unitOfMeasure : 'UomDistance'
       del_distance                            as DelDistance,
+      uom_time                                as UomTime,
+      @Semantics.quantity.unitOfMeasure : 'UomTime'
       del_time                                as DelTime,
       del_zone                                as DelZone,
       currency_code                           as CurrencyCode,

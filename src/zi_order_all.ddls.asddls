@@ -9,11 +9,11 @@
 }
 define view entity ZI_ORDER_ALL
   as select from zaorder2 as AllOrders
-  
-  association to parent ZI_ORDER       as _Orders    on $projection.Uuid = _Orders.Uuid
-  association [0..1] to ZI_WAREHOUSES as _Warehouses on $projection.Uuidw = _Warehouses.Uuidw
-  association [0..1] to I_Currency    as _Currency   on $projection.CurrencyCode = _Currency.Currency
-  association [0..*] to ZI_RATES      as _Rates      on $projection.DelZone = _Rates.DelZone
+
+  association        to parent ZI_ORDER as _Orders     on $projection.Uuid = _Orders.Uuid
+  association [0..1] to ZI_WAREHOUSES   as _Warehouses on $projection.Uuidw = _Warehouses.Uuidw
+  association [0..1] to I_Currency      as _Currency   on $projection.CurrencyCode = _Currency.Currency
+  association [0..*] to ZI_RATES        as _Rates      on $projection.DelZone = _Rates.DelZone
 
 
 {
@@ -25,7 +25,11 @@ define view entity ZI_ORDER_ALL
       vaddress                                as Vaddress,
       cast( longitude as abap.dec( 17, 14 ) ) as Longitude,
       cast( latitude  as abap.dec( 17, 14 ) ) as Latitude,
+      uom_distance                            as UomDistance,
+      @Semantics.quantity.unitOfMeasure : 'UomDistance'
       del_distance                            as DelDistance,
+      uom_time                                as UomTime,
+      @Semantics.quantity.unitOfMeasure : 'UomTime'
       del_time                                as DelTime,
       del_zone                                as DelZone,
       currency_code                           as CurrencyCode,
@@ -44,6 +48,6 @@ define view entity ZI_ORDER_ALL
       _Currency,
       _Rates,
       _Warehouses,
-      _Orders 
+      _Orders
 
 }

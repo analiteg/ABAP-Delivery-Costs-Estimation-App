@@ -18,8 +18,10 @@ define root view entity ZC_ORDER
       DelStatus,
       @EndUserText.label: 'Verified Address'
       Vaddress,
+      UomDistance,
       @EndUserText.label: 'Delivery Distance'
       DelDistance,
+      UomTime,
       @EndUserText.label: 'Delivery Time'
       DelTime,
       @EndUserText.label: 'Delivery Zone'
@@ -29,9 +31,7 @@ define root view entity ZC_ORDER
       @Semantics.amount.currencyCode: 'CurrencyCode'
        @EndUserText.label: 'Delivery Costs'
       DelCost,
-      //      CreatedBy,
-      //      CreatedAt,
-      //      LocalLastChangedBy,
+
       LocalLastChangedAt,
       LastChangedAt,
       /* Associations */
