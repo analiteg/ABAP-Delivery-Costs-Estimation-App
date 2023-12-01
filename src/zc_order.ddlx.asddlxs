@@ -17,17 +17,25 @@ annotate view ZC_ORDER with
               { id:              'AllOrders',
                 purpose:         #STANDARD,
                 type:            #IDENTIFICATION_REFERENCE,
-                label:           'Additional Information',
+               label:           'Additional Information',
                 position:        20,
-                targetElement:   '_AllOrders'}
+                targetElement:   '_AllOrders'},
+                {
+                id:              'WarehouseAdd',
+                purpose:         #STANDARD,
+                type:            #IDENTIFICATION_REFERENCE,
+                label:           'Warehouse',
+                position:        30,
+                targetElement:   '_WarehouseAdd'}
+
 
                 ]
 
-   @UI:{ 
-          identification: [{ position: 10, label: 'Uuid' }],
-          selectionField: [ { position: 10 } ]
-          }
-    Uuid;
+  @UI:{
+         identification: [{ position: 10, label: 'Uuid' }],
+         selectionField: [ { position: 10 } ]
+         }
+  Uuid;
 
 
   @UI.hidden: true
@@ -66,9 +74,9 @@ annotate view ZC_ORDER with
   identification: [ { position: 80 } ] }
   DelCost;
 
-//  @UI: {  lineItem:       [ { position: 90 } ],
-//  identification: [ { position: 90 } ] }
-//  CurrencyCode;
+  //  @UI: {  lineItem:       [ { position: 90 } ],
+  //  identification: [ { position: 90 } ] }
+  //  CurrencyCode;
 
   @UI.hidden: true
   LastChangedAt;

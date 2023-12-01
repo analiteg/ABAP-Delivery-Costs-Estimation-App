@@ -13,15 +13,15 @@ define view entity ZC_ORDER_ALL
       @EndUserText.label: 'Customer Name'
       Cname,
       @Search.defaultSearchElement: true
-      @EndUserText.label: 'Initial Address'
+      @EndUserText.label: 'Delivery Initial Address'
       Address,
       @EndUserText.label: 'Delivery Status'
       DelStatus,
-      @EndUserText.label: 'Verified Address'
+      @EndUserText.label: 'Delivery Verified Address'
       Vaddress,
-      @EndUserText.label: 'Longitude'
+      @EndUserText.label: 'Delivery Point Longitude'
       Longitude,
-      @EndUserText.label: 'Latitude'
+      @EndUserText.label: 'Delivery Point Latitude'
       Latitude,
       UomDistance,
       @EndUserText.label: 'Delivery Distance'
@@ -46,6 +46,7 @@ define view entity ZC_ORDER_ALL
       LocalLastChangedAt,
       @EndUserText.label: 'Last Changed At'
       LastChangedAt,
+
       /* Associations */
       _Currency,
       _Rates,

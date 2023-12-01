@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Warehouse',
+                typeNamePlural: 'Warehouses',
+                title: { type: #STANDARD, label: 'Warehouse', value: 'WAddress' } }}
+annotate view ZC_WAREHOUSE_ADD with
+{
+  @UI.facet: [ { id:         'Warehouses',
+              purpose:       #STANDARD,
+              type:          #IDENTIFICATION_REFERENCE,
+              label:         'Warehouses',
+              position:      10 }  ]
+
+  @UI:{
+     identification: [{ position: 10, label: 'Wherehouse Uuid' }],
+     selectionField: [ { position: 10 } ]
+     }
+  Uuidw;
+
+  @UI: {  lineItem:       [ { position: 30 } ],
+      identification: [ { position: 30 } ],
+      selectionField: [ { position: 30 } ] }
+  WAddress;
+
+  @UI: {  lineItem:       [ { position: 40 } ],
+    identification: [ { position: 40 } ],
+    selectionField: [ { position: 40 } ] }
+  WLatitude;
+
+
+  @UI: {  lineItem:       [ { position: 50 } ],
+  identification: [ { position: 50 } ],
+  selectionField: [ { position: 50 } ] }
+  WLongitude;
+}

@@ -296,7 +296,7 @@ CLASS lcl_delivery IMPLEMENTATION.
     lt_rate = get_rates( ).
 
     LOOP AT lt_total_orders_step_2 ASSIGNING FIELD-SYMBOL(<fs_order_step_3>).
-      DATA(ls_rate) = FILTER #( lt_rate USING KEY primary_key WHERE min_distance < CONV #( <fs_order_step_3>-del_distance ) AND max_distance > CONV #( <fs_order_step_3>-del_distance ) ).
+      DATA(ls_rate) = FILTER #( lt_rate USING KEY primary_key WHERE min_distance <  <fs_order_step_3>-del_distance  AND max_distance >  <fs_order_step_3>-del_distance  ).
       ls_order_line = CORRESPONDING #( <fs_order_step_3> ).
       ls_order_line = CORRESPONDING #( BASE ( ls_order_line ) ls_rate[ 1 ] ).
       ls_order_line-del_cost =  ls_rate[ 1 ]-zone_tarif * ( ( ls_order_line-del_distance ) / 1000 ) .

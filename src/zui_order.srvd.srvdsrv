@@ -1,8 +1,9 @@
 @EndUserText.label: 'Service Definition'
 define service ZUI_ORDER {
-  expose ZC_ORDER      as Orders;
-  expose ZC_ORDER_ALL  as AllOrders;
-  expose I_Currency    as Currency;
-  expose ZI_WAREHOUSES as Warehouse;
-  expose ZI_RATES      as Rates;
+  expose ZC_ORDER         as Orders;
+  expose ZC_ORDER_ALL     as AllOrders;
+  expose ZC_WAREHOUSE_ADD as WarehouseAdd;
+  expose I_Currency       as Currency;
+  expose ZI_WAREHOUSES    as Warehouse;
+  expose ZI_RATES         as Rates;
 }

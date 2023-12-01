@@ -4,10 +4,11 @@ define root view entity ZI_ORDER
   as select from zaorder2 as Orders
 
 
-  composition [1..1] of ZI_ORDER_ALL  as _AllOrders
-  association [0..1] to ZI_WAREHOUSES as _Warehouses on $projection.Uuidw = _Warehouses.Uuidw
-  association [0..1] to I_Currency    as _Currency   on $projection.CurrencyCode = _Currency.Currency
-  association [0..*] to ZI_RATES      as _Rates      on $projection.DelZone = _Rates.DelZone
+  composition [1..1] of ZI_ORDER_ALL     as _AllOrders
+  composition [1..1] of ZI_WAREHOUSE_ADD as _WarehouseAdd
+  association [0..1] to ZI_WAREHOUSES    as _Warehouses on $projection.Uuidw = _Warehouses.Uuidw
+  association [0..1] to I_Currency       as _Currency   on $projection.CurrencyCode = _Currency.Currency
+  association [0..*] to ZI_RATES         as _Rates      on $projection.DelZone = _Rates.DelZone
 {
   key uuid                                    as Uuid,
       uuid_w                                  as Uuidw,
@@ -40,5 +41,6 @@ define root view entity ZI_ORDER
       _Currency,
       _Rates,
       _Warehouses,
-      _AllOrders
+      _AllOrders,
+      _WarehouseAdd
 }

@@ -9,6 +9,8 @@
 }
 define view entity ZI_WAREHOUSES
   as select from zawarehouse2 as Warehouses
+//  association        to parent ZI_ORDER as _Orders   on $projection.Uuidw = _Orders.Uuidw
+  
   association [1..*] to ZI_ORDER as _Orders on $projection.Uuidw = _Orders.Uuidw
   association [1..*] to ZI_ORDER_ALL as _AllOrders on $projection.Uuidw = _AllOrders.Uuidw
 {

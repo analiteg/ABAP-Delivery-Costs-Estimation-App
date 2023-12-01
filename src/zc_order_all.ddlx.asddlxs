@@ -29,6 +29,7 @@ annotate view ZC_ORDER_ALL with
       identification: [ { position: 70 } ] }
   Latitude;
 
+
   @UI: {  lineItem:       [ { position: 120 } ],
   identification: [ { position: 120 } ] }
   CreatedBy;

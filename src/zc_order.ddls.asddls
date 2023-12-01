@@ -38,5 +38,6 @@ define root view entity ZC_ORDER
       _Currency,
       _Rates,
       _Warehouses,
-      _AllOrders : redirected to composition child ZC_ORDER_ALL
+      _AllOrders : redirected to composition child ZC_ORDER_ALL,
+      _WarehouseAdd : redirected to composition child ZC_WAREHOUSE_ADD
 }
