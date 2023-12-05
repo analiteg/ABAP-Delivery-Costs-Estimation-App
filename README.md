@@ -6,7 +6,7 @@ The business scenario is as follows: a trading company (TC) has some booked item
 We should find delivery costs from the warehouse to the client for every item (order). 
 
 To solve this task,  we should:
-Based on the client delivery address, determine geo coordinates - longitude and latitude.
-Based on geo data (lon and lat ) of the client and the warehouse we can build a delivery route and determine delivery distance and time.
-Then we should determine the delivery zone and rate.
-In the end, we can multiply the delivery distance and rate and get a delivery cost for the item.
+1. Based on the client delivery address, determine geo coordinates - longitude and latitude.
+2. Based on geo data (lon and lat ) of the client and the warehouse we can build a delivery route and determine delivery distance and time.
+3. Then we should determine the delivery zone and rate.
+4. In the end, we can multiply the delivery distance and rate and get a delivery cost for the item.
