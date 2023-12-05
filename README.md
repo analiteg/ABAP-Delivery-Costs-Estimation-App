@@ -10,3 +10,7 @@ To solve this task,  we should:
 2. Based on geo data (lon and lat ) of the client and the warehouse we can build a delivery route and determine delivery distance and time.
 3. Then we should determine the delivery zone and rate.
 4. In the end, we can multiply the delivery distance and rate and get a delivery cost for the item.
+
+
+To solve points 1 and 2 of the task, we can use the geo data app www.geoapify.com. You have to register here and get a FREE API KEY.
+This service helps us to obtain a full client address with geo-coordinates (longitude and latitude) and build an optimal delivery route based on real geo data (city traffic, road rules, driving mode, and other parameters.). This service is similar to Google Maps, but from my point of view, it is cheaper and more suitable.
