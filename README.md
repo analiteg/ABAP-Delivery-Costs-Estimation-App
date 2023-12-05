@@ -3,7 +3,7 @@ This App has been created for educational purposes. All code is valid for ABAP C
 
 The business scenario is as follows: a trading company (TC) has some booked items that are stored in the company's warehouse. The TC company should deliver these items from the warehouse to their clients. For this purpose, the TC company has a contract with a delivery company (DC). The DC delivery company provides for their clients with 4 delivery zones, based on distance in km. Every delivery zone has its rate per 1 km. 
 
-We should find delivery costs from the warehouse to the client for every item (order). 
+We have to find delivery costs from the warehouse to the client for every item (order). 
 
 To solve this task,  we should:
 1. Based on the client delivery address, determine geo coordinates - longitude and latitude.
