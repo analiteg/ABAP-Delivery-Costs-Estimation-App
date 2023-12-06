@@ -20,10 +20,9 @@ To validate results (geo data, distance, and delivery routes) I use data (name a
 
 ## How it looks.
 
-1. Initial List Report.
 ![Initial List Report](https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/1%20-%20Initial%20List%20Report.png)
 
-
+![Initial Object Page(https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/2%20-%20Initial%20Object%20Page.png)
 
 
 
