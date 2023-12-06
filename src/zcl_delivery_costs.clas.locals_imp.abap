@@ -65,7 +65,7 @@ CLASS lcl_delivery DEFINITION CREATE PRIVATE.
 
     CONSTANTS base_url      TYPE string VALUE 'https://api.geoapify.com/v1/geocode/search?text='.
     CONSTANTS route_url     TYPE string VALUE 'https://api.geoapify.com/v1/routing?waypoints='.
-    CONSTANTS api_key       TYPE string VALUE 'fc1823fd9ff24e1db96dced76209c85d'.
+    CONSTANTS api_key       TYPE string VALUE 'YOUR FREE API KEY'.
     CONSTANTS content_type  TYPE string VALUE 'Content-type'.
     CONSTANTS json_content  TYPE string VALUE 'text/xml; charset=UTF-8'.
     CONSTANTS json_content2 TYPE string VALUE 'application/json'.
