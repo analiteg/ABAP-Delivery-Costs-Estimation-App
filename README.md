@@ -18,7 +18,7 @@ This service helps us to obtain a full client address with geo-coordinates (long
 
 To validate results (geo data, distance, and delivery routes) I use data (name and address) of 22 public schools in Belostok city (Poland), due to I live in this city and I cant estimate the precision of this data.
 
-##How it works.
+## How it works.
 
 The model consists of 3 tables:
 - ZARATES stores information about delivery zones and rates (zones, max, and min distance, rates for zone)
