@@ -17,3 +17,16 @@ This service helps us to obtain a full client address with geo-coordinates (long
 
 
 To validate results (geo data, distance, and delivery routes) I use data (name and address) of 22 public schools in Belostok city (Poland), due to I live in this city and I cant estimate the precision of this data.
+
+##How it works.
+
+The model consists of 3 tables:
+- ZARATES stores information about delivery zones and rates (zones, max, and min distance, rates for zone)
+- ZAWAREHOUSE2 stores information about warehouse(warehouse coordinates and id)
+- ZAORDER2 stores information about delivery orders (client name, address, coordinates, delivery distance, zone, time, costs, etc.).
+
+Class ZCL_DELIVERY_COSTS_DATA generates initial demo data and saves it into DB tables. Press F9 to get all the necessary data.
+
+Class ZCL_DELIVERY_COSTS gets necessary data via API, makes calculations, and saves results into db tables. Press F9 to run this class.
+
+Important! Before using this class, you have to register your FREE API key at www.geoapify.com and put in the local class at line 68.
