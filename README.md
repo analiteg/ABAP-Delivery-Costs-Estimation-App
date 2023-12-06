@@ -24,6 +24,9 @@ To validate results (geo data, distance, and delivery routes) I use data (name a
 
 ![Initial Object Page](https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/2%20-%20Initial%20Object%20Page.png)
 
+![Filled List Report](https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/3%20-%20Filled%20List%20Report.png)
+
+![Filled Object Page](https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/4%20-%20Filled%20Object%20Page.png)
 
 
 
