@@ -42,3 +42,7 @@ Class ZCL_DELIVERY_COSTS_DATA generates initial demo data and saves it into DB t
 Class ZCL_DELIVERY_COSTS gets necessary data via API, makes calculations, and saves results into db tables. Press F9 to run this class.
 
 Important! Before using this class, you have to register your FREE API key at www.geoapify.com and put in the local class at line 68.
+
+## ABAP RAP Application
+
+To build ABAP RAP application please use CDS views from the package.
