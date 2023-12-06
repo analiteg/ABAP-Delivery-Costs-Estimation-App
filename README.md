@@ -18,6 +18,16 @@ This service helps us to obtain a full client address with geo-coordinates (long
 
 To validate results (geo data, distance, and delivery routes) I use data (name and address) of 22 public schools in Belostok city (Poland), due to I live in this city and I cant estimate the precision of this data.
 
+## How it looks.
+
+1. Initial List Report.
+![Initial List Report](https://github.com/analiteg/ABAP-Delivery-Costs-Estimation/blob/main/img/1%20-%20Initial%20List%20Report.png)
+
+
+
+
+
+
 ## How it works.
 
 The model consists of 3 tables:
